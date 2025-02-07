@@ -1,399 +1,491 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <title>reveal.js</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <link rel="stylesheet" href="dist/reset.css" />
-        <link rel="stylesheet" href="dist/reveal.css" />
-        <link rel="stylesheet" href="dist/theme/tokyo-night.css" />
+    <title>reveal.js</title>
 
-        <!-- Theme used for syntax highlighted code -->
-        <link rel="stylesheet" href="plugin/highlight/tokyo-night.css" />
-        <link rel="stylesheet" href="plugin/chalkboard/style.css" />
-        <link rel="stylesheet" href="plugin/customcontrols/style.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/tokyo-night.css" />
 
-    <body>
-        <div class="reveal">
-            <div class="slides">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/tokyo-night.css" />
+    <link rel="stylesheet" href="plugin/chalkboard/style.css" />
+    <link rel="stylesheet" href="plugin/customcontrols/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Python GUI</h1>
+                <h2>TKinter</h2>
+                <img class="r-stretch" src="https://ktkv-presentations.github.io/algos-19" data-type="qrcode" />
+            </section>
+            <section>
                 <section>
-                    <h1>Beautiful presentations</h1>
-                    <h2>New features</h2>
+                    <h1>GUI vs CLI vs TUI</h1>
+                </section>
+                <section>
+                    <h1>CLI</h1>
+                    <h3>Command-Line Interface</h3>
+                    <h4>Интерфейс командной строки</h4>
+                    <p>
+                        способ взаимодействия с программами через текстовые
+                        команды, вводимые пользователем в терминале или
+                        консоли
+                    </p>
+                    <hr />
+                    <h5>Примеры CLI программ</h5>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="border-b">Git</div>
+                        <div class="border-b">Python</div>
+                        <div class="border-b">diskpart</div>
+                        <div class="border-b">mv/rm/cp</div>
+                    </div>
+                </section>
+                <section>
+                    <h1>TUI</h1>
+                    <h3>Text User Interface</h3>
+                    <h4>Текстовый пользовательский интерфейс</h4>
+                    <p>
+                        использует псевдографику для организации интерфейса
+                        в текстовом режиме терминала
+                    </p>
+                    <h5>Примеры TUI программ</h5>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="border-b">Midnight Commander (MC)</div>
+                        <div class="border-b">Vim, Nano</div>
+                        <div class="border-b">htop</div>
+                        <div class="border-b">Dialog, ncurses</div>
+                    </div>
+                </section>
+                <section>
+                    <h1>GUI</h1>
+                    <h3>Graphical User Interface</h3>
+                    <h4>Графический интерфейс пользователя</h4>
+                    <p>
+                        способ взаимодействия пользователя с программой с помощью визуальных элементов
+                    </p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Основные элементы GUI</h1>
                     <ul>
-                        <li>Nerd icons </li>
-                        <li>
-                            <code class="js">
-                                (inline) => code("highlighting")
-                            </code>
-                        </li>
-                        <li>Automatic QR Code generation</li>
-                        <li>and much more!</li>
+                        <div class="grid grid-cols-2 gap-4">
+                            <li>
+                                <code>Окно (Window)</code> – главный контейнер, в котором располагаются другие элементы.
+                            </li>
+                            <li>
+                                <code>Кнопка (Button)</code> – интерактивный элемент, запускающий действие при нажатии.
+                            </li>
+                            <li>
+                                <code>Метка (Label)</code> – текстовая информация, которая отображается на экране.
+                            </li>
+                            <li>
+                                <code>Поле ввода (Entry, Input Field)</code> – позволяет пользователю вводить текст.
+                            </li>
+                        </div>
                     </ul>
                 </section>
                 <section>
-                    <h1>CUSTOM TOKYONIGHT THEME</h1>
-                    <h2 class="fragment">THAT HAS</h2>
-                    <h3 class="fragment">MULTI</h3>
-                    <h4 class="fragment">LEVEL</h4>
-                    <h5 class="fragment">HEADING</h5>
-                    <h6 class="fragment">COLORS</h6>
-                    <h6>
-                        Thanks to this project
-                        <a
-                            href="https://github.com/tcmmichaelb139/obsidian-tokyonight">
-                            
-                        </a>
-                        for the colorscheme!
-                    </h6>
+                    <h1>Основные элементы GUI</h1>
+                    <ul>
+                        <div class="grid grid-cols-2 gap-4">
+                            <li>
+                                <code>Флажок (Checkbox)</code> – элемент для выбора нескольких опций.
+                            </li>
+                            <li>
+                                <code>Переключатель (Radio Button)</code> – позволяет выбрать только один вариант из
+                                нескольких.
+                            </li>
+                            <li>
+                                <code>Выпадающий список (Dropdown, ComboBox)</code> – список возможных вариантов для
+                                выбора.
+                            </li>
+                            <li>
+                                <code>Поле для вывода текста (Text Area)</code> – многострочное поле для ввода и
+                                редактирования
+                                текста.
+                            </li>
+                            <li>
+                                <code>Меню (Menu Bar)</code> – верхняя панель с пунктами меню (Файл, Правка и т. д.).
+                            </li>
+                        </div>
+                    </ul>
                 </section>
                 <section>
-                    <section>
-                        <h1>Tailwind CSS</h1>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div class="col-span-2">
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h1>Custom classes</h1>
-                        <div class="grid grid-cols-3 gap-8">
-                            <div class="border-r">
-                                <h5>border-r</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-o">
-                                <h5>border-o</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-y">
-                                <h5>border-y</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+                    <h1>Библиотеки для создания GUI на Python</h1>
+                    <table>
+                        <tr>
+                            <td>Библиотека</td>
+                            <td>Особенности</td>
+                            <td>Платформы</td>
+                        </tr>
+                        <tr>
+                            <td>PyQt / PySide</td>
+                            <td>Основан на Qt, мощный и кроссплатформенный, используется для сложных приложений</td>
+                            <td>Windows, macOS, Linux</td>
+                        </tr>
+                        <tr>
+                            <td>Kivy</td>
+                            <td>Подходит для мобильных и настольных приложений, поддерживает сенсорный ввод</td>
+                            <td>Windows, macOS, Linux, Android, iOS</td>
+                        </tr>
+                        <tr>
+                            <td>wxPython</td>
+                            <td>Нативный интерфейс для Windows, macOS и Linux</td>
+                            <td>Windows, macOS, Linux</td>
+                        </tr>
+                        <tr>
+                            <td>PyGTK</td>
+                            <td>Используется в среде GNOME, интеграция с Linux</td>
+                            <td>Linux</td>
+                        </tr>
+                        <tr>
+                            <td>PyGame</td>
+                            <td>Основной для создания игр, работа с графикой и анимацией</td>
+                            <td>Windows, macOS, Linux</td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Tkinter</h1>
+                    <p>стандартный пакет для создания графического интерфейса (GUI) в Python</p>
+                    <p>является обёрткой над <code></code>Tcl/Tk</code> – кроссплатформенным инструментом для работы с
+                        GUI</p>
+                    <pre><code data-trim class="python">
+import tkinter as tk
+                    </code></pre>
                 </section>
                 <section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <div>
-                            Now also has Tokyo Night
-                            <code>highlight.js</code>
-                            highlighting implementation
-                        </div>
-                        <pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
-					</code></pre>
-                    </section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <h5>Inline code highlighting is now also supported!</h5>
-                        <p>
-                            Just wrap your code with
-                            <code>&lt;code&gt;</code>
-                            tag and get highlighting like this
-                            <code class="js">
-                                const foo = () => {return bar}
-                            </code>
-                            !
-                        </p>
-                    </section>
+                    <h1>Основные преимущества Tkinter</h1>
+                    <ul>
+                        <li>
+                            Встроен в Python
+                        </li>
+                        <li>
+                            Прост в использовании
+                        </li>
+                        <li>
+                            Кроссплатформенность
+                        </li>
+                        <li>
+                            Гибкость
+                        </li>
+                    </ul>
                 </section>
                 <section>
-                    <h1>Mermaid for beautiful diagrams!</h1>
-                    <div class="mermaid">
-                        <pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre
-                        >
+                    <h1>
+                        Работа с Tkinter
+                    </h1>
+                    <h4>Создание окна в Tkinter</h4>
+                    <pre><code data-trim class="python">
+import tkinter as tk
+
+# Создаём главное окно
+root = tk.Tk()
+
+# Устанавливаем заголовок окна
+root.title("Моя первая программа")
+
+# Запускаем главный цикл обработки событий
+root.mainloop()
+                    </code></pre>
+                </section>
+                <section>
+                    <h1>Основные элементы интерфейса</h1>
+                    <table>
+                        <tr>
+                            <td>Виджет</td>
+                            <td>Описание</td>
+                        </tr>
+                        <tr>
+                            <td>Label</td>
+                            <td>Текстовая метка</td>
+                        </tr>
+                        <tr>
+                            <td>Button</td>
+                            <td>Кнопка</td>
+                        </tr>
+                        <tr>
+                            <td>Entry</td>
+                            <td>Поле ввода текста</td>
+                        </tr>
+                        <tr>
+                            <td>Text</td>
+                            <td>Многострочное текстовое поле</td>
+                        </tr>
+                        <tr>
+                            <td>Checkbutton</td>
+                            <td>Флажок (чекбокс)</td>
+                        </tr>
+                        <tr>
+                            <td>Radiobutton</td>
+                            <td>Переключатель (радиокнопка)</td>
+                        </tr>
+                        <tr>
+                            <td>Listbox</td>
+                            <td>Список элементов</td>
+                        </tr>
+                        <tr>
+                            <td>Frame</td>
+                            <td>Контейнер для других виджетов</td>
+                        </tr>
+                        <tr>
+                            <td>Canvas</td>
+                            <td>Графический холст для рисования</td>
+                        </tr>
+                        <tr>
+                            <td>Scrollbar</td>
+                            <td>Полоса прокрутки</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h1>Добавление и размещение элементов</h1>
+                    <pre><code data-trim class="python">
+label = tk.Label(root, text="Привет, это Tkinter!")
+label.pack()
+                    </code></pre>
+                </section>
+                <section>
+                    <h1>Размещение элементов в окне</h1>
+                    <h3>Менеджеры геометрии</h3>
+                    <div class="border-b">
+                        <h4><code>.pack</code></h4>
+                        <p>автоматическое выравнивание элементов сверху вниз или слева направо</p>
+                        <pre><code data-trim class="python">
+label.pack()
+button.pack()
+                    </code></pre>
                     </div>
-                    <h4>
-                        Check documentation
-                        <a href="https://mermaid.js.org/config/usage.html">
-                            here
-                        </a>
-                        !
-                    </h4>
-                </section>
-                <section>
-                    <h1>Now supports Nerd font icons!</h1>
-                    <div>Nerdy project that adds icons to font itself</div>
-                    <h6>
-                        Checkout their site for icons like this
-                        <a href="https://www.nerdfonts.com/">󰖟</a>
-                        !
-                    </h6>
-                </section>
-                <section>
-                    <h1>Now supports automatic QRCode generation!</h1>
-                    <div>
-                        With GoQR you can just add data-type and alt attributes
-                        to your
-                        <code class="html">
-                            &lt;img src="https://goqr.me/" data-type="qrcode" /
-                            &gt;
-                        </code>
-                        tag!
+                    <div class="border-b">
+                        <h4><code>..grid(row, column)</code></h4>
+                        <p>размещение элементов в сетке (таблице)</p>
+                        <pre><code data-trim class="python">
+label.grid(row=0, column=0)
+button.grid(row=1, column=0)
+                    </code></pre>
                     </div>
-                    <img
-                        class="r-stretch"
-                        src="https://goqr.me/"
-                        data-type="qrcode" />
                 </section>
                 <section>
-                    <h1>New changes on the way!</h1>
+                    <h1>Размещение элементов в окне</h1>
+                    <h3>Менеджеры геометрии</h3>
+                    <div class="border-b">
+                        <h4><code>.place(x, y)</code></h4>
+                        <p>точное размещение по координатам</p>
+                        <pre><code data-trim class="python">
+button.place(x=50, y=100)
+                         </code></pre>
+                    </div>
                 </section>
-            </div>
+                <section>
+                    <h1>Обработка событий (Event Handling)</h1>
+                    <p>Приложения с GUI реагируют на действия пользователя (клики, ввод текста, перемещение мыши).</p>
+                    <pre><code data-trim class="python">
+def on_click():
+    print("Кнопка была нажата!")
+
+btn = tk.Button(root, text="Кликни меня", command=on_click)
+btn.pack()
+                    </code></pre>
+                </section>
+            </section>
         </div>
+    </div>
 
-        <script src="dist/reveal.js"></script>
-        <script src="plugin/notes/notes.js"></script>
-        <script src="plugin/markdown/markdown.js"></script>
-        <script src="plugin/highlight/highlight.js"></script>
-        <script src="plugin/qrcode/qrcode.js"></script>
-        <script src="plugin/mermaid/mermaid.js"></script>
-        <script src="plugin/chalkboard/plugin.js"></script>
-        <script src="plugin/customcontrols/plugin.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/qrcode/qrcode.js"></script>
+    <script src="plugin/mermaid/mermaid.js"></script>
+    <script src="plugin/chalkboard/plugin.js"></script>
+    <script src="plugin/customcontrols/plugin.js"></script>
 
-        <script>
-            tailwind.config = {
-                corePlugins: {
-                    preflight: false,
-                },
-            }
-        </script>
-        <script>
-            // More info about initialization & config:
-            // - https://revealjs.com/initialization/
-            // - https://revealjs.com/config/
+    <script>
+        tailwind.config = {
+            corePlugins: {
+                preflight: false,
+            },
+        }
+    </script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
 
-            const colors = {
-                blue0: 'rgb(61, 89, 161)',
-                blue: 'rgb(122, 162, 247)',
-                cyan: 'rgb(125, 207, 255)',
-                magenta: 'rgb(187, 154, 247)',
-                orange: 'rgb(255, 158, 100)',
-                yellow: 'rgb(224, 175, 104)',
-                green: 'rgb(158, 206, 106)',
-                teal: 'rgb(26, 188, 156)',
-                red: 'rgb(255, 117, 127)',
-                red1: 'rgb(219, 75, 75)',
-                fg: 'rgb(192, 202, 245)',
-                bg: 'rgb(26, 27, 38)',
-                transparent: '#00000000',
-            }
+        const colors = {
+            blue0: 'rgb(61, 89, 161)',
+            blue: 'rgb(122, 162, 247)',
+            cyan: 'rgb(125, 207, 255)',
+            magenta: 'rgb(187, 154, 247)',
+            orange: 'rgb(255, 158, 100)',
+            yellow: 'rgb(224, 175, 104)',
+            green: 'rgb(158, 206, 106)',
+            teal: 'rgb(26, 188, 156)',
+            red: 'rgb(255, 117, 127)',
+            red1: 'rgb(219, 75, 75)',
+            fg: 'rgb(192, 202, 245)',
+            bg: 'rgb(26, 27, 38)',
+            transparent: '#00000000',
+        }
 
-            Reveal.initialize({
-                hash: true,
-                // Learn about plugins: https://revealjs.com/plugins/
-                plugins: [
-                    RevealMarkdown,
-                    RevealHighlight,
-                    RevealNotes,
-                    RevealMermaid,
-                    RevealChalkboard,
-                    RevealCustomControls,
-                ],
-                slideNumber: true,
-                customcontrols: {
-                    controls: [
-                        {
-                            icon: '<div></div>',
-                            title: 'Clear canvas (DEL)',
-                            action: 'RevealChalkboard.clear();',
-                        },
-                        {
-                            icon: '<div></div>',
-                            title: 'Toggle chalkboard (B)',
-                            action: 'RevealChalkboard.toggleChalkboard();',
-                        },
-                        {
-                            icon: '<div></div>',
-                            title: 'Toggle notes canvas (C)',
-                            action: 'RevealChalkboard.toggleNotesCanvas();',
-                        },
-                    ],
-                },
-                chalkboard: {
-                    boardmarkerWidth: 5,
-                    boardmarkers: [
-                        {
-                            color: colors.bg,
-                            cursor:
-                                'url(' +
-                                path +
-                                'img/boardmarker-black.png), auto',
-                        },
-                        {
-                            color: colors.fg,
-                            cursor:
-                                'url(' +
-                                path +
-                                'img/boardmarker-black.png), auto',
-                        },
-                        {
-                            color: colors.blue,
-                            cursor:
-                                'url(' +
-                                path +
-                                'img/boardmarker-black.png), auto',
-                        },
-                        {
-                            color: colors.red,
-                            cursor:
-                                'url(' +
-                                path +
-                                'img/boardmarker-black.png), auto',
-                        },
-                        {
-                            color: colors.green,
-                            cursor:
-                                'url(' +
-                                path +
-                                'img/boardmarker-black.png), auto',
-                        },
-                        {
-                            color: colors.yellow,
-                            cursor:
-                                'url(' +
-                                path +
-                                'img/boardmarker-black.png), auto',
-                        },
-                        {
-                            color: colors.teal,
-                            cursor:
-                                'url(' +
-                                path +
-                                'img/boardmarker-black.png), auto',
-                        },
-                        {
-                            color: colors.orange,
-                            cursor:
-                                'url(' +
-                                path +
-                                'img/boardmarker-black.png), auto',
-                        },
-                    ],
-                    chalks: [
-                        {
-                            color: colors.bg,
-                            cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
-                        },
-                        {
-                            color: colors.fg,
-                            cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
-                        },
-                        {
-                            color: colors.blue,
-                            cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
-                        },
-                        {
-                            color: colors.red,
-                            cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
-                        },
-                        {
-                            color: colors.green,
-                            cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
-                        },
-                        {
-                            color: colors.yellow,
-                            cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
-                        },
-                        {
-                            color: colors.teal,
-                            cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
-                        },
-                        {
-                            color: colors.orange,
-                            cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
-                        },
-                    ],
-                },
-                mermaid: {
-                    securityLevel: 'loose',
-                    theme: 'dark',
-                    themeVariables: {
-                        darkMode: true,
-                        textColor: colors.fg,
-                        background: colors.bg,
-                        mainBkg: colors.bg,
-                        lineColor: colors.fg,
+        Reveal.initialize({
+            hash: true,
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [
+                RevealMarkdown,
+                RevealHighlight,
+                RevealNotes,
+                RevealMermaid,
+                RevealChalkboard,
+                RevealCustomControls,
+            ],
+            slideNumber: true,
+            customcontrols: {
+                controls: [
+                    {
+                        icon: '<div></div>',
+                        title: 'Clear canvas (DEL)',
+                        action: 'RevealChalkboard.clear();',
                     },
+                    {
+                        icon: '<div></div>',
+                        title: 'Toggle chalkboard (B)',
+                        action: 'RevealChalkboard.toggleChalkboard();',
+                    },
+                    {
+                        icon: '<div></div>',
+                        title: 'Toggle notes canvas (C)',
+                        action: 'RevealChalkboard.toggleNotesCanvas();',
+                    },
+                ],
+            },
+            chalkboard: {
+                boardmarkerWidth: 5,
+                boardmarkers: [
+                    {
+                        color: colors.bg,
+                        cursor:
+                            'url(' +
+                            path +
+                            'img/boardmarker-black.png), auto',
+                    },
+                    {
+                        color: colors.fg,
+                        cursor:
+                            'url(' +
+                            path +
+                            'img/boardmarker-black.png), auto',
+                    },
+                    {
+                        color: colors.blue,
+                        cursor:
+                            'url(' +
+                            path +
+                            'img/boardmarker-black.png), auto',
+                    },
+                    {
+                        color: colors.red,
+                        cursor:
+                            'url(' +
+                            path +
+                            'img/boardmarker-black.png), auto',
+                    },
+                    {
+                        color: colors.green,
+                        cursor:
+                            'url(' +
+                            path +
+                            'img/boardmarker-black.png), auto',
+                    },
+                    {
+                        color: colors.yellow,
+                        cursor:
+                            'url(' +
+                            path +
+                            'img/boardmarker-black.png), auto',
+                    },
+                    {
+                        color: colors.teal,
+                        cursor:
+                            'url(' +
+                            path +
+                            'img/boardmarker-black.png), auto',
+                    },
+                    {
+                        color: colors.orange,
+                        cursor:
+                            'url(' +
+                            path +
+                            'img/boardmarker-black.png), auto',
+                    },
+                ],
+                chalks: [
+                    {
+                        color: colors.bg,
+                        cursor:
+                            'url(' + path + 'img/chalk-white.png), auto',
+                    },
+                    {
+                        color: colors.fg,
+                        cursor:
+                            'url(' + path + 'img/chalk-white.png), auto',
+                    },
+                    {
+                        color: colors.blue,
+                        cursor:
+                            'url(' + path + 'img/chalk-white.png), auto',
+                    },
+                    {
+                        color: colors.red,
+                        cursor:
+                            'url(' + path + 'img/chalk-white.png), auto',
+                    },
+                    {
+                        color: colors.green,
+                        cursor:
+                            'url(' + path + 'img/chalk-white.png), auto',
+                    },
+                    {
+                        color: colors.yellow,
+                        cursor:
+                            'url(' + path + 'img/chalk-white.png), auto',
+                    },
+                    {
+                        color: colors.teal,
+                        cursor:
+                            'url(' + path + 'img/chalk-white.png), auto',
+                    },
+                    {
+                        color: colors.orange,
+                        cursor:
+                            'url(' + path + 'img/chalk-white.png), auto',
+                    },
+                ],
+            },
+            mermaid: {
+                securityLevel: 'loose',
+                theme: 'dark',
+                themeVariables: {
+                    darkMode: true,
+                    textColor: colors.fg,
+                    background: colors.bg,
+                    mainBkg: colors.bg,
+                    lineColor: colors.fg,
                 },
-            })
-        </script>
-    </body>
-</html>
+            },
+        })
+    </script>
+</body>
 
+</html>
