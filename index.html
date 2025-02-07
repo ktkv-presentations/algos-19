@@ -290,12 +290,68 @@ button.place(x=50, y=100)
                 <section>
                     <h1>Обработка событий (Event Handling)</h1>
                     <p>Приложения с GUI реагируют на действия пользователя (клики, ввод текста, перемещение мыши).</p>
+                    <h4>Пример обработки клика по кнопке</h4>
                     <pre><code data-trim class="python">
 def on_click():
     print("Кнопка была нажата!")
 
 btn = tk.Button(root, text="Кликни меня", command=on_click)
 btn.pack()
+                    </code></pre>
+                </section>
+                <section>
+                    <h1>Обработка событий (Event Handling)</h1>
+                    <p>Приложения с GUI реагируют на действия пользователя (клики, ввод текста, перемещение мыши).</p>
+                    <h4>Пример обработки нажатия клавиши</h4>
+                    <pre><code data-trim class="python">
+def key_pressed(event):
+    print(f"Нажата клавиша: {event.char}")
+
+root.bind("<Key>", key_pressed)
+                    </code></pre>
+                    <ul>
+                        <li>
+                            &lt;Button-1&gt; – клик левой кнопкой мыши
+                        </li>
+                        <li>
+                            &lt;Button-3&gt; – клик правой кнопкой мыши
+                        </li>
+                        <li>
+                            &lt;Key&gt; – любое нажатие клавиши
+                        </li>
+                        <li>
+                            &lt;Return&gt; – нажатие Enter
+                        </li>
+                        <li>
+                            &lt;Motion&gt; – перемещение мыши
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <pre><code data-trim class="python">
+import tkinter as tk
+
+def on_button_click():
+    text = entry.get()  # Получаем текст из поля ввода
+    label.config(text=f"Вы ввели: {text}")  # Обновляем текст метки
+
+# Создаём главное окно
+root = tk.Tk()
+root.title("Простое приложение")  # Заголовок окна
+root.geometry("300x150")  # Размер окна
+
+# Создаём виджеты
+label = tk.Label(root, text="Введите текст:")
+label.pack(pady=5)  # Размещаем с отступом
+
+entry = tk.Entry(root)
+entry.pack(pady=5)
+
+button = tk.Button(root, text="Показать", command=on_button_click)
+button.pack(pady=5)
+
+# Запускаем главный цикл
+root.mainloop()
                     </code></pre>
                 </section>
             </section>
